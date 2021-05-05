@@ -334,7 +334,7 @@ func (p *gdbProcess) Connect(conn net.Conn, path string, pid int, debugInfoDirs 
 				// as https://bugs.llvm.org/show_bug.cgi?id=50169
 				version, err := strconv.ParseInt(v[len("version:"):], 10, 32)
 
-				if err == nil && version >= 1200 && version <= 1205 && p.bi.Arch.Name == "arm64" {
+				if err == nil && version >= 1205 && version <= 1205 && p.bi.Arch.Name == "arm64" {
 					p.gcmdok = false
 				}
 			}
